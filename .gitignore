@@ -1,0 +1,11 @@
+
+# React Gitignore #
+###################
+
+node_modules/
+.DS_Store
+.cache/
+dist/
+coverage/
+.vscode/
+.env
