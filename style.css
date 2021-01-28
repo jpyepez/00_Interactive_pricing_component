@@ -22,6 +22,7 @@ body {
 /* body styles */
 main {
     background-image: url("images/bg-pattern.svg");
+    background-repeat: no-repeat;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -29,6 +30,8 @@ main {
 
 .intro-container {
     background-image: url("images/pattern-circles.svg");
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .pricing-container {
@@ -40,48 +43,74 @@ main {
     flex-flow: column nowrap;
 }
 
-/* TODO: probably with grid */
-.switch {
-    width: 60px;
-    height: 34px;
+.range-container {
+    display: flex;
+    flex-flow: column nowrap;
 }
 
-.switch input {
-    opacity: 0;
+.range-container__labels {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+}
+
+.range-container__range {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+.range-container__billing {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+}
+
+[type="checkbox"] {
     width: 0;
     height: 0;
+    inset: 0;
+}
+
+.range-container__switch label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .slider {
-    cursor: ponter;
-    inset: 0;
-    background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s
-}
-
-.slider:before {
-    content: "";
+    position: relative;
+    width: 50px;
     height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s
+    border-radius: 15px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, .4);
+    background-color: lightgray;
+    transition: all 0.3s;
 }
 
-input:checked + .slider {
-    background-color: #2196F3;
+.slider::before,
+.slider::after {
+    content: "";
+    position: absolute;
 }
 
-input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3
+.slider::before {
+    left: 1px;
+    top: 1px;
+    width: 24px;
+    height: 24px;
+    background: white;
+    border-radius: 50%;;
+    z-index: 1;
+    transition: transform 0.3s;
 }
 
-input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
+[type="checkbox"]:checked + span {
+    background-color: green;
 }
+
+[type="checkbox"]:checked + span::before {
+    transform: translateX(24px)
+}
+
 /* end of body styles */

@@ -16,31 +16,42 @@
       <h2>Simple, traffic-based pricing</h2>
       <p>Sign-up for our 30-day trial. No credit card required.</p>
     </section>
+
     <section class="pricing-container">
-      <section class="range-container">
-        <p>100K pageviews</p>
-        <p>$16.00</p>
-        <p>/month</p>
-        <input type="range" name="range" id="range">
-        <p>Monthly Billing</p>
+      <div class="range-container">
 
-        <label class="switch">
-          <input type="checkbox" name="toggle" >
-          <span class="slider"></span>
-        </label>
-        <p>Yearly Billing</p>
-        <p>25% discount</p>
-        <p>/month</p>
-      </section>
+        <div class="range-container__labels">
+          <p>100K pageviews</p>
+          <p>$16.00</p>
+          <p>/month</p>
+        </div>
 
-      <section class="button-container">
+        <div class="range-container__range">
+          <input type="range" name="range" id="range">
+        </div>
+
+        <div class="range-container__billing">
+
+          <p>Monthly Billing</p>
+          <div class="range-container__switch" >
+            <label for="2">
+              <input type="checkbox" id="2" >
+              <span class="slider"></span>
+            </label>
+          </div>
+          <p>Yearly Billing</p>
+          <p>25% discount</p>
+        </div>
+      </div>
+
+      <div class="button-container">
         <ul>
           <li>Unlimited websites</li>
           <li>100% data ownership</li>
           <li>Email reports</li>
           <button>Start my trial</button>
         </ul>
-      </section>
+      </div>
     </section>
   </main>
   <script src="./index.js"></script>  
