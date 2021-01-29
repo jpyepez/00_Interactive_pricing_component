@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" type="text/css" href="./style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet"><link rel="stylesheet" type="text/css" href="./style.css">
   
   <title>Frontend Mentor | Interactive pricing component</title>
 
@@ -22,7 +23,7 @@
 
         <div class="range-container__labels">
           <p>100K pageviews</p>
-          <p>$16.00</p>
+          <p class="range-container__price">$16.00</p>
           <p>/month</p>
         </div>
 
@@ -49,8 +50,8 @@
           <li>Unlimited websites</li>
           <li>100% data ownership</li>
           <li>Email reports</li>
-          <button>Start my trial</button>
         </ul>
+        <div><button>Start my trial</button></div>
       </div>
     </section>
   </main>
