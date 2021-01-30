@@ -22,21 +22,21 @@
       <div class="range-container">
 
         <div class="range-container__labels">
-          <p>100K pageviews</p>
-          <p><span>$16.00</span>/month</p>
+          <p id="pageviews">100K pageviews</p>
+          <p><span id="price">$16.00</span>/month</p>
         </div>
 
         <div class="range-container__range">
-          <input type="range" name="range" id="range">
+          <input type="range" name="range" id="range" min="0">
         </div>
 
         <div class="range-container__billing">
 
           <p>Monthly Billing</p>
           <div class="range-container__switch" >
-            <label for="2">
-              <input type="checkbox" id="2" >
-              <span class="slider"></span>
+            <label for="toggle_status">
+              <input type="checkbox" id="toggle_status" >
+              <span class="toggle"></span>
             </label>
           </div>
           <p>Yearly Billing</p>

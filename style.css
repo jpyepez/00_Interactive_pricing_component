@@ -48,7 +48,7 @@ main {
 .pricing-container {
     width: 34rem;
     height: 25rem;
-    background-color: white;
+    background-color: hsl(0, 0%, 100%);
     border-radius: 3%;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, .05);
 
@@ -74,13 +74,18 @@ main {
 }
 
 .range-container__labels p:first-child {
+    margin-left: 10%;
     text-transform: uppercase;
 }
 
 .range-container__labels p {
-    margin: 0 10%;
+    margin: 0;
     display: inline-block;
     vertical-align: middle;
+}
+
+.range-container__labels p:last-child {
+    margin-right: 10%;
 }
 
 .range-container__labels p span{
@@ -110,7 +115,7 @@ main {
 
      height: 8px; /* Specified height */
      border-radius: 5px;
-     background: linear-gradient(to right, hsl(174, 77%, 80%) 0%, hsl(174, 77%, 80%) 50%, gray 50%, gray 100%); /* Grey background */
+     background: linear-gradient(to right, hsl(174, 77%, 80%) 0%, hsl(174, 77%, 80%) 50%, hsl(224, 65%, 95%) 50%, hsl(224, 65%, 95%) 100%); /* Grey background */
      outline: none; /* Remove outline */
      opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
      -webkit-transition: .2s; /* 0.2 seconds transition on hover */
@@ -174,39 +179,38 @@ main {
     inset: 0;
 }
 
-.slider {
+.toggle {
     position: relative;
-    width: 50px;
-    height: 26px;
+    width: 40px;
+    height: 20px;
     border-radius: 15px;
-    box-shadow: inset 0 0 5px rgba(0, 0, 0, .4);
-    background-color: lightgray;
+    background-color: hsl(223, 50%, 87%);
     transition: all 0.3s;
 }
 
-.slider::before,
-.slider::after {
+.toggle::before,
+.toggle::after {
     content: "";
     position: absolute;
 }
 
-.slider::before {
-    left: 1px;
-    top: 1px;
-    width: 24px;
-    height: 24px;
-    background: white;
+.toggle::before {
+    left: 4px;
+    top: 3px;
+    width: 14px;
+    height: 14px;
+    background: hsl(0, 0%, 100%);
     border-radius: 50%;;
     z-index: 1;
     transition: transform 0.3s;
 }
 
 [type="checkbox"]:checked + span {
-    background-color: green;
+    background-color: hsl(174, 86%, 45%);
 }
 
 [type="checkbox"]:checked + span::before {
-    transform: translateX(24px)
+    transform: translateX(18px)
 }
 
 .button-container {
