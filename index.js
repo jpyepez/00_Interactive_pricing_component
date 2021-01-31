@@ -25,7 +25,7 @@ range.oninput = event => {
     let views = pricing[val].views;
     currentPrice = pricing[val].price;
 
-    range.style.background = `linear-gradient(to right, hsl(174, 77%, 80%) 0%, hsl(174, 77%, 80%) ${rangeProgress}%, hsl(224, 65%, 95%) ${rangeProgress}%, hsl(224, 65%, 95%) 100%)`;
+    range.style.background = `linear-gradient(to right, var(--soft-cyan) 0%, var(--soft-cyan) ${rangeProgress}%, hsl(224, 65%, 95%) ${rangeProgress}%, hsl(224, 65%, 95%) 100%)`;
     pageViews.textContent = `${views}`
     price.textContent = `$${applyDiscount(currentPrice).toFixed(2)}`
 }
