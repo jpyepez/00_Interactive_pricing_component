@@ -3,6 +3,7 @@
 :root {
     --soft-cyan: hsl(174, 77%, 80%);
     --strong-cyan: hsl(174, 86%, 45%);
+    --thumb-active: #329F90;
     --discount-bg: hsl(14, 92%, 95%);
     --discount-text: hsl(15, 100%, 70%);
     --cta-pale-blue: hsl(226, 100%, 87%);
@@ -13,6 +14,8 @@
     --toggle-bg: hsl(223, 50%, 87%);
     --text-gray-blue: hsl(225, 20%, 60%);
     --cta-dark-blue: hsl(227, 35%, 25%);
+    --cta-hover-blue: hsl(227, 35%, 30%);
+    --cta-active-blue: hsl(227, 15%, 25%);
 }
 
 /* Border box declaration */
@@ -155,15 +158,13 @@ h2 {
 #range {
     width: 80%;
     -webkit-appearance: none;  /* Override default CSS styles */
-     appearance: none;
+    appearance: none;
 
-     height: 8px; /* Specified height */
-     border-radius: 5px;
-     background: linear-gradient(to right, var(--soft-cyan) 0%, var(--soft-cyan) 50%, var(--empty-range) 50%, var(--empty-range) 100%); /* Grey background */
-     outline: none; /* Remove outline */
-     opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
-     -webkit-transition: .2s; /* 0.2 seconds transition on hover */
-     transition: opacity .2s;
+    height: 8px; /* Specified height */
+    border-radius: 5px;
+    background: linear-gradient(to right, var(--soft-cyan) 0%, var(--soft-cyan) 50%, var(--empty-range) 50%, var(--empty-range) 100%); /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
 }
 
 #range::-webkit-slider-thumb {
@@ -182,6 +183,11 @@ h2 {
     cursor: pointer;
 }
 
+#range::-webkit-slider-thumb:active {
+    cursor: grabbing;
+    background-color: var(--thumb-active);
+}
+
 #range::-moz-range-thumb {
     width: 40px;
     height: 40px;
@@ -191,6 +197,11 @@ h2 {
     background: url('images/icon-slider.svg');
     background-repeat: no-repeat;
     cursor: pointer;
+}
+
+#range::-moz-range-thumb:active {
+    cursor: grabbing;
+    background-color: var(--thumb-active);
 }
 
 .range-container__billing {
@@ -232,6 +243,8 @@ h2 {
     border-radius: 15px;
     background-color: var(--toggle-bg);
     transition: all 0.3s;
+
+    cursor: pointer;
 }
 
 .toggle::before,
@@ -318,6 +331,16 @@ button {
 
 button:focus {
     outline: 0;
+}
+
+button:hover {
+    background-color: var(--cta-hover-blue);
+    transition: all .2s;
+}
+
+button:active {
+    background-color: var(--cta-active-blue);
+    transition: all .2s;
 }
 
 /* end of body styles */
