@@ -39,4 +39,3 @@ const applyDiscount = (originalPrice) => {
     let discount = yearlyBilling? .75 : 1.;
     return originalPrice * discount;
 }
-
